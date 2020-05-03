@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const {
   BrowserWindow
@@ -16,18 +16,18 @@ const defaultProps = {
 }
 
 class Window extends BrowserWindow {
-  constructor({
+  constructor ({
     file,
     ...windowSettings
   }) {
     super({
       ...defaultProps,
       ...windowSettings
-    });
-    this.loadFile(file);
+    })
+    this.loadFile(file)
     this.once('ready-to-show', () => {
-      this.show();
-    });
+      this.show()
+    })
   }
 }
 
