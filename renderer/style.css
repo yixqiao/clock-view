@@ -1,0 +1,154 @@
+@font-face {
+  font-family: DSEG7;
+  src: url(../assets/fonts/fonts-DSEG_v046/DSEG7-Classic/DSEG7Classic-Regular.ttf);
+}
+
+@font-face {
+  font-family: DSEG14;
+  src: url(../assets/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Regular.ttf);
+}
+
+@font-face {
+  font-family: PTMono;
+  src: url(../assets/fonts/PTMono/PTMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: UbuntuMono;
+  src: url(../assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
+@font-face{
+  font-family: Retro;
+  src: url(../assets/fonts/retro/retro.ttf);
+}
+
+@font-face{
+  font-family: Larabie;
+  src: url(../assets/fonts/larabie/larabiefont_rg.ttf);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #2d0922;
+}
+
+body {
+  font: caption;
+  margin: 0px;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgb(22, 4, 16);
+  background: linear-gradient(45deg, rgba(22, 4, 16, 1) 0%, rgba(45, 9, 34, 1) 45%, rgba(43, 8, 31, 1) 100%);
+  color: #e7dacb;
+}
+
+#time-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: PTMono, monospace;
+}
+
+#time-view {
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+#time-num-view {
+  position: relative;
+  display: inline-block;
+  font-family: DSEG7, monospace;
+  font-size: 16vw;
+  margin: 0 1.5%;
+  z-index: 10;
+}
+
+#time-num-back {
+  position: absolute;
+  font-family: DSEG7, monospace;
+  font-size: 16vw;
+  color: #e7dacb10;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#time-sec-view {
+  position: relative;
+  display: inline-block;
+  font-family: DSEG7, monospace;
+  font-size: 10vw;
+  margin: 0 1.5%;
+  z-index: 10;
+}
+
+#time-sec-back {
+  position: absolute;
+  font-family: DSEG7, monospace;
+  font-size: 10vw;
+  color: #e7dacb10;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#time-ampm-view {
+  position: relative;
+  display: inline-block;
+  font-family: DSEG14, monospace;
+  font-size: 7.6vw;
+  line-height: 110%;
+  margin: 0 1.5%;
+  display: none;
+}
+
+#time-ampm-back {
+  position: absolute;
+  font-family: DSEG14, monospace;
+  font-size: 7.6vw;
+  color: #e7dacb10;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+
+#date-view {
+  width: 100%;
+  padding: 0px;
+  margin: 1.5% 0;
+  text-align: center;
+  font-size: 5vw;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Larabie, monospace;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
