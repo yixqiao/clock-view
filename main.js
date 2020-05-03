@@ -32,6 +32,10 @@ function main () {
     mainWindow.setVisibleOnAllWorkspaces(!mainWindow.isFullScreen())
   })
 
+  electronLocalshortcut.register(mainWindow, 'Escape', () => {
+    app.quit()
+  })
+
   mainWindow.once('show', () => {
     // Do nothing
   })
