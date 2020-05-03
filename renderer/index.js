@@ -10,7 +10,7 @@ function updateTime () {
   var curTime = new Date()
   var hours = curTime.getHours()
   document.getElementById('time-num-view').innerHTML = `${(hours % 12) ? (hours % 12) : 12}:${curTime.getMinutes().toString().padStart(2, '0')}`
-  document.getElementById('time-num-view').innerHTML += `<div id="time-num-back">${hours % 12 < 10 ? '8' : '88'}:88</div>`
+  document.getElementById('time-num-view').innerHTML += `<div id="time-num-back">${((hours % 12) ? (hours % 12) : 12) < 10 ? '8' : '88'}:88</div>`
   document.getElementById('time-sec-view').innerHTML = `${curTime.getSeconds().toString().padStart(2, '0')}`
   document.getElementById('time-sec-view').innerHTML += '<div id="time-sec-back">88</div>'
   document.getElementById('time-ampm-view').innerHTML = `${hours < 12 ? 'A<br>M' : 'P<br>M'}`
