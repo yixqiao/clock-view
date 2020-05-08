@@ -1,8 +1,8 @@
 'use strict'
 
-// const {
-//   ipcRenderer
-// } = require('electron')
+const {
+  ipcRenderer
+} = require('electron')
 
 function updateTime () {
   const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Sepetember', 'November', 'December']
@@ -45,3 +45,8 @@ updateTime()
 setInterval(updateTime, 100)
 
 // var timeUpdate = setInterval(updateTime, 100)
+
+// Double click for fullscreen
+document.getElementById('body').addEventListener('dblclick', function (e) {
+  ipcRenderer.send('enterFullScreen')
+})

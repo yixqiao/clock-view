@@ -3,8 +3,8 @@
 
 // const path = require('path')
 const {
-  app
-  // ipcMain
+  app,
+  ipcMain
 } = require('electron')
 const electronLocalshortcut = require('electron-localshortcut')
 
@@ -32,8 +32,20 @@ function main () {
     mainWindow.setVisibleOnAllWorkspaces(!mainWindow.isFullScreen())
   })
 
+  ipcMain.on('enterFullScreen', () => {
+    mainWindow.setFullScreen(true)
+    mainWindow.setAlwaysOnTop(!mainWindow.isFullScreen())
+    mainWindow.setVisibleOnAllWorkspaces(!mainWindow.isFullScreen())
+  })
+
   electronLocalshortcut.register(mainWindow, 'Escape', () => {
-    app.quit()
+    if (mainWindow.isFullScreen()) {
+      mainWindow.setFullScreen(false)
+      mainWindow.setAlwaysOnTop(!mainWindow.isFullScreen())
+      mainWindow.setVisibleOnAllWorkspaces(!mainWindow.isFullScreen())
+    } else {
+      app.quit()
+    }
   })
 
   mainWindow.once('show', () => {
